@@ -1,0 +1,19 @@
+{
+  "myMedia" : [ {
+    "id" : "1",
+    "title" : "Apex",
+    "year" : 2018,
+    "creators" : [ "Respawn Entertainment" ]
+  }, {
+    "id" : "2",
+    "title" : "Call of Duty",
+    "year" : 2019,
+    "creators" : [ "Infinity Ward" ]
+  }, {
+    "id" : "3",
+    "title" : "Battlefield",
+    "year" : 2018,
+    "creators" : [ "Dice LA" ]
+  } ],
+  "mediaName" : "My Games"
+}

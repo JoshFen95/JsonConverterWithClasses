@@ -1,0 +1,14 @@
+{
+  "myMedia" : [ {
+    "id" : "1",
+    "title" : "Snatch",
+    "year" : 2000,
+    "creators" : [ "Guy Ritchie" ]
+  }, {
+    "id" : "2",
+    "title" : "Avengers",
+    "year" : 2008,
+    "creators" : [ "Marvel Comics" ]
+  } ],
+  "mediaName" : "My Films"
+}

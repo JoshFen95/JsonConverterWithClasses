@@ -67,6 +67,8 @@ public class Media <T extends Entertainment> {
                 ", myMedia=" + myMedia +
                 '}';
     }
+
+
 //    private Entertainment findEntertainment(int number) {
 //
 //        for (int i = 0; i < this.myMedia.size(); i++) {

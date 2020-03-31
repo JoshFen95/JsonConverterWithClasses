@@ -1,7 +1,11 @@
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+import org.w3c.dom.ls.LSOutput;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
@@ -74,7 +78,7 @@ public class JsonToObjects<T> {
 
     }
 
-    public List<Entertainment> returnBookList(String arrayListFileName) {
+    public Entertainment[] returnEntertainmentList(String arrayListFileName) {
 
 
         if (findJsonFile(arrayListFileName)) {
@@ -83,22 +87,23 @@ public class JsonToObjects<T> {
                 // create object mapper instance
                 ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
+
                 // convert JSON array to list of books
-                List<Media> newList = Arrays.asList(mapper.readValue(Paths.get(arrayListFileName + ".json").toFile(), Media.class));
-                Media media = newList.get(0);
-                List<Entertainment> entertainmentList = media.getMyMedia();
-                return entertainmentList;
+
+                return (mapper.readValue(getClass().getClassLoader().getResourceAsStream(arrayListFileName + ".json"), Entertainment[].class));
+
 
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
+
         return null;
     }
 
     private boolean findJsonFile(String fileName) {
 
-        File tmpFile = new File(fileName + ".json");
+        File tmpFile = new File(getClass().getClassLoader().getResource(fileName + ".json").getFile());
         boolean exists = tmpFile.exists();
 
         if (exists) {
@@ -107,4 +112,17 @@ public class JsonToObjects<T> {
             return false;
         }
     }
+
+    public <T> T fetchObjectFromJson(String resourceFilePath, Class<T> clazz) {
+        try {
+
+            return new ObjectMapper().readValue(
+                    getClass().getClassLoader()
+                            .getResourceAsStream(resourceFilePath), clazz);
+        } catch (IOException e) {
+            System.out.println("Could not deserialize object. Check you are using correct data type.");
+            return null;
+        }
+    }
 }
+

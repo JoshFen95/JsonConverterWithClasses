@@ -1,5 +1,4 @@
-{
-  "myMedia" : [ {
+[ {
     "id" : "1",
     "title" : "Hunger Games",
     "year" : 2003,
@@ -14,6 +13,4 @@
     "title" : "Spider-Man",
     "year" : 1968,
     "creators" : [ "Stan Lee" ]
-  } ],
-  "mediaName" : "My Books"
-}
+  } ]

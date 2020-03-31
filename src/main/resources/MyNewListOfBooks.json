@@ -1,0 +1,16 @@
+ [ {
+    "id" : "1",
+    "title" : "Hunger Games",
+    "year" : 2003,
+    "creators" : [ "Suzanne Collins" ]
+  }, {
+    "id" : "2",
+    "title" : "Harry Potter",
+    "year" : 20004,
+    "creators" : [ "JK Rowling" ]
+  }, {
+    "id" : "3",
+    "title" : "Spider-Man",
+    "year" : 1968,
+    "creators" : [ "Stan Lee" ]
+  } ]

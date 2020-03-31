@@ -46,19 +46,7 @@ public class Media <T extends Entertainment> {
 
 
 
-    private int findMediaIndex(String title) {
 
-        for (int i = 0; i < this.myMedia.size(); i++) {
-
-            T t = this.myMedia.get(i);
-
-            if (t.getTitle().equals(title)) {
-                return i;
-            }
-        }
-
-        return -1;
-    }
 
     @Override
     public String toString() {
@@ -69,17 +57,4 @@ public class Media <T extends Entertainment> {
     }
 
 
-//    private Entertainment findEntertainment(int number) {
-//
-//        for (int i = 0; i < this.myMedia.size(); i++) {
-//
-//            T t = this.myMedia.get(i);
-//
-//            if (t.getTitle().equals(title)) {
-//                return i;
-//            }
-//        }
-//
-//        return -1;
-//    }
 }

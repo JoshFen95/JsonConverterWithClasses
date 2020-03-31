@@ -1,8 +1,6 @@
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.exc.MismatchedInputException;
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import org.w3c.dom.ls.LSOutput;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -90,7 +88,7 @@ public class JsonToObjects<T> {
 
                 // convert JSON array to list of books
 
-                return (mapper.readValue(getClass().getClassLoader().getResourceAsStream(arrayListFileName + ".json"), Entertainment[].class));
+                return mapper.readValue(getClass().getClassLoader().getResourceAsStream(arrayListFileName + ".json"), Entertainment[].class);
 
 
             } catch (Exception ex) {

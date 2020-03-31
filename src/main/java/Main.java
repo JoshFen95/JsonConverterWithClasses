@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 
@@ -202,39 +201,6 @@ public class Main {
 
         }
     }
-    //-------------------------------------------------------------------------------
-//    public static void jsonFileToJavaObject() { //works
-//
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("What is the name of the JSON file you want to turn into an object?: ");
-//        String jsonFileName = input.nextLine();
-//
-//        JsonToObjects convert = new JsonToObjects(); //works
-//        convert.jsonFileToObject(jsonFileName);
-//
-//    }
-//
-//    public static void jsonStringToJavaObject() { //works
-//
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("What is the name of the JSON string you want to turn into an object?: ");
-//        String jsonString = input.nextLine();
-//
-//        JsonToObjects convert = new JsonToObjects();
-//        convert.jsonStringToObject(jsonString);
-//
-//    }
-//
-//    public static void jsonListToObjectArrayList() { //works
-//
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("What is the name of the JSON list filename you want to turn into an object?: ");
-//        String jsonArrayListFileName = input.nextLine();
-//
-//        JsonToObjects convert = new JsonToObjects();
-//        convert.jsonArrayToObjectList(jsonArrayListFileName);
-//  -------------------------------------------------------------------------------
-//    }
 
     //FIND OBJECT FROM JSON FILE VIA ID
 
@@ -353,39 +319,7 @@ public class Main {
         }
     }
 
-//    private static void menuJsonToJava(Media createdMedia) {
-//
-//        Scanner scanner = new Scanner(System.in);
-//        boolean quit = false;
-//
-//
-//        while (!quit) {
-//
-//            System.out.println("0 to quit\n" +
-//                    "1 to convert a JSON File to a Java Object\n" +
-//                    "2 to convert a JSON String  to a Java Object\n" +
-//                    "3 to convert a JSON List to Java ArrayList \n" +
-//                    "Enter Action:");
-//            int action = scanner.nextInt();
-//            scanner.nextLine();
-//
-//            switch (action) {
-//                case 0:
-//                    System.out.println("Going back to Main Menu");
-//                    quit = true;
-//                    break;
-//                case 1:
-//                    jsonFileToJavaObject();
-//                    break;
-//                case 2:
-//                    jsonStringToJavaObject();
-//                    break;
-//                case 3:
-//                    jsonListToObjectArrayList();
-//                    break;
-//            }
-//        }
-//    }
+
 
     private static Media findMedia(String mediaName) {
 
@@ -398,6 +332,5 @@ public class Main {
     }
 }
 
-// json string to object prints book
-//do the json file that are made into objects know where they belong? eg game or film
+
 

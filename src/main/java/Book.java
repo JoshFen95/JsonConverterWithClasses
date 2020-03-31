@@ -5,5 +5,7 @@ public class Book extends Entertainment {
         super(id, title, year, creators);
     }
 
+    public Book() {}
+
 
 }

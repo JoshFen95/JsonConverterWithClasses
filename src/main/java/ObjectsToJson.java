@@ -3,7 +3,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
 import java.nio.file.Paths;
-import java.util.ArrayList;
+
 
 
 public class ObjectsToJson {
